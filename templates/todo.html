@@ -1,0 +1,22 @@
+<h1 style="text-align:center;">Welcome to my Todo App, Please add your item.</h1>
+
+<!-- <ul>
+    <li>temporary todo item A</li>
+    <li>temporary todo item B</li>
+</ul> -->
+
+<ul style="text-align:center;">
+    {% for todo_item in all_item %}
+    <li>{{todo_item.content}}
+        <form action="/deleteTodo/{{todo_item.id}}/" style="display:inline;" method="POST">{% csrf_token %}
+            <input type="submit" value="Delete"/>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<form action="/addTodo/" method="POST" style="text-align:center; list-style-type:disc;">{% csrf_token %}
+    <input type="text" name="content"/>
+    <input type="submit" value="Add"/>
+</form>
+
