@@ -16,7 +16,7 @@
 </ul>
 
 <form action="/addTodo/" method="POST" style="text-align:center; list-style-type:disc;">{% csrf_token %}
-    <input type="text" name="content"/>
+    <input type="text" name="content"  placeholder="Add Todo Item"/>
     <input type="submit" value="Add"/>
 </form>
 
