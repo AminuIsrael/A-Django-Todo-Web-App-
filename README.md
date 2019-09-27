@@ -1,0 +1,5 @@
+- Simply run this command on your terminal in the file directory `python manage.py runserver`
+- Add this url path to your browser `http://127.0.0.1:8000/todo`
+- When it takes you to the page, type your desired todo item and click the **Add** button
+- Your todo item with then be displayed on the page.
+- You can simply delete a Todo Item by clicking the **Delete** button once task is completed
